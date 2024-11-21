@@ -49,23 +49,23 @@ class BikeLockTestActivity : BaseActivity() {
 
         session.setListener(object : SimpleSessionListener() {
             override fun onConnecting() {
-                Toast.makeText(this@BikeLockTestActivity, "正在连接...", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@BikeLockTestActivity, "onConnecting...", Toast.LENGTH_SHORT).show()
             }
 
             override fun onConnected() {
-                Toast.makeText(this@BikeLockTestActivity, "连接成功", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@BikeLockTestActivity, "onConnected", Toast.LENGTH_SHORT).show()
             }
 
             override fun onDisconnected() {
-                Toast.makeText(this@BikeLockTestActivity, "断开连接", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@BikeLockTestActivity, "onDisconnected", Toast.LENGTH_SHORT).show()
             }
 
             override fun onDeviceNoSupport() {
-                Toast.makeText(this@BikeLockTestActivity, "设备不支持", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@BikeLockTestActivity, "onDeviceNoSupport", Toast.LENGTH_SHORT).show()
             }
 
             override fun onReady() {
-                // 关锁监听
+                Toast.makeText(this@BikeLockTestActivity, "onReady", Toast.LENGTH_SHORT).show()
                 session.call(CommandManager.blCommand.lock())
                     .subscribe(object : NotifyCallback<BLLockResult> {
                         override fun onSuccess(call: ISessionCall<BLLockResult>, data: IResp<BLLockResult>) {

@@ -29,13 +29,13 @@
             android:id="@+id/btn_dashboard"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="仪表盘" />
+            android:text="DashboardActivity" />
 
         <Button
             android:id="@+id/btn_ble"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="马蹄锁测试" />
+            android:text="BikeLockTestActivity" />
 
         <Button
             android:id="@+id/btn_scooter"
@@ -59,7 +59,7 @@
             android:id="@+id/btn_ulock"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="U型锁测试" />
+            android:text="ULockTestActivity" />
 
         <Button
             android:id="@+id/btn_carport"

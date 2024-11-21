@@ -12,31 +12,31 @@
 
             <Button
                     android:id="@+id/btn_connect"
-                    android:text="连接"
+                    android:text="connect"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"/>
 
             <Button
                     android:id="@+id/btn_disconnect"
-                    android:text="断开连接"
+                    android:text="disConnect"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"/>
 
             <Button
                     android:id="@+id/btn_key"
-                    android:text="获取key"
+                    android:text="key"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"/>
 
             <Button
                     android:id="@+id/btn_unlock"
-                    android:text="开锁"
+                    android:text="unlock"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"/>
 
             <Button
                     android:id="@+id/btn_info"
-                    android:text="获取锁信息"
+                    android:text="info"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"/>
 
@@ -48,7 +48,7 @@
 
             <Button
                     android:id="@+id/btn_fw"
-                    android:text="获取固件包"
+                    android:text="Command read"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"/>
 
@@ -60,31 +60,31 @@
 
             <Button
                     android:id="@+id/btn_start_modify"
-                    android:text="发送一个修改包"
+                    android:text="start_modify"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"/>
 
             <Button
                     android:id="@+id/btn_send_pack"
-                    android:text="发送修改包"
+                    android:text="send_pack"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"/>
 
             <Button
                     android:id="@+id/btn_upgrade"
-                    android:text="固件升级"
+                    android:text="upgrade"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"/>
 
             <Button
                     android:id="@+id/btn_shutdown"
-                    android:text="关机"
+                    android:text="shutdown"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"/>
 
             <Button
                     android:id="@+id/btn_get_log"
-                    android:text="获取日志"
+                    android:text="get_log"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"/>
 
