@@ -24,7 +24,7 @@
 
             <Button
                     android:id="@+id/btn_key"
-                    android:text="key"
+                    android:text="initConfig"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"/>
 

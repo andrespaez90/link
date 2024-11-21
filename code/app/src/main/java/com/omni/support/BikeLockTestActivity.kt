@@ -39,7 +39,7 @@ class BikeLockTestActivity : BaseActivity() {
     override fun initListener() {
         session = Bike3In1Session.Builder()
 //            .address("10:10:00:00:01:D0")
-            .address("10:30:00:10:0C:A5")
+            .address("F3:FF:9E:7B:24:7D")
 //            .address("10:30:00:06:03:3E")
 //            .address("10:00:30:00:01:F0")
             .deviceKey("yOTmK50z")
@@ -49,22 +49,27 @@ class BikeLockTestActivity : BaseActivity() {
 
         session.setListener(object : SimpleSessionListener() {
             override fun onConnecting() {
+                Log.e("Bike3In1Session", "onConnecting");
                 Toast.makeText(this@BikeLockTestActivity, "onConnecting...", Toast.LENGTH_SHORT).show()
             }
 
             override fun onConnected() {
+                Log.e("Bike3In1Session", "onConnected");
                 Toast.makeText(this@BikeLockTestActivity, "onConnected", Toast.LENGTH_SHORT).show()
             }
 
             override fun onDisconnected() {
+                Log.e("Bike3In1Session", "onDisconnected");
                 Toast.makeText(this@BikeLockTestActivity, "onDisconnected", Toast.LENGTH_SHORT).show()
             }
 
             override fun onDeviceNoSupport() {
+                Log.e("Bike3In1Session", "onDeviceNoSupport");
                 Toast.makeText(this@BikeLockTestActivity, "onDeviceNoSupport", Toast.LENGTH_SHORT).show()
             }
 
             override fun onReady() {
+                Log.e("Bike3In1Session", "onReady");
                 Toast.makeText(this@BikeLockTestActivity, "onReady", Toast.LENGTH_SHORT).show()
                 session.call(CommandManager.blCommand.lock())
                     .subscribe(object : NotifyCallback<BLLockResult> {
