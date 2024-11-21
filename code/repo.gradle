@@ -1,18 +1,4 @@
-apply plugin: 'maven'
 
-uploadArchives {
-    repositories {
-        mavenDeployer {
-//            repository(url: uri(REPO_LOCAL_URL))
-            repository(url: REPO_MAVEN_PUBLIC_URL) {
-                authentication(userName: MAVEN_USERNAME, password: MAVEN_PASSWORD)
-            }
-            pom.groupId = REPO_GROUP
-            pom.artifactId = REPO_ARTIFACTID
-            pom.version = REPO_VERSION
-        }
-    }
-}
 
 //// 生成sources.jar
 //task buildSourcesJar(type: Jar) {

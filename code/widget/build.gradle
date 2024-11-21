@@ -9,13 +9,10 @@ apply from: '../repo.gradle'
 
 android {
     compileSdkVersion android_sdk.compile
-    buildToolsVersion android_sdk.tool
 
     defaultConfig {
         minSdkVersion android_sdk.min
         targetSdkVersion android_sdk.target
-        versionCode 2
-        versionName REPO_VERSION
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -32,6 +29,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.omni.support.widget'
 
 }
 
@@ -47,7 +45,7 @@ dependencies {
 
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
 
-    implementation 'com.blankj:utilcodex:1.25.9'
+    implementation 'com.blankj:utilcodex:1.31.1'
     implementation 'com.github.duanhong169:colorpicker:1.1.6'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47-androidx'
 }

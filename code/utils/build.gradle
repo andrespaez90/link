@@ -9,14 +9,11 @@ apply from: '../repo.gradle'
 
 android {
     compileSdkVersion android_sdk.compile
-    buildToolsVersion android_sdk.tool
 
 
     defaultConfig {
         minSdkVersion android_sdk.min
         targetSdkVersion android_sdk.target
-        versionCode 1
-        versionName REPO_VERSION
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -33,6 +30,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.omni.support.utils'
 
 }
 

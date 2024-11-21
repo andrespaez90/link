@@ -8,13 +8,10 @@ apply from: '../repo.gradle'
 
 android {
     compileSdkVersion android_sdk.compile
-    buildToolsVersion android_sdk.tool
 
     defaultConfig {
         minSdkVersion android_sdk.min
         targetSdkVersion android_sdk.target
-        versionCode 1
-        versionName REPO_VERSION
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -31,6 +28,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.omni.support.ble'
 
 }
 
@@ -48,21 +46,4 @@ static def getJarName(version) {
     return String.format("%s_v%s.jar", "omni_ble_sdk", version)
 }
 
-// 构建jar包
-//task makeJar(type: Jar) { // 如果要包含第三方jar包, type: Jar
-//    delete('build/libs/' + getJarName(REPO_VERSION)) // 删除旧的jar
-//    from('build/intermediates/packaged-classes/release/')
-//    from(project.zipTree("libs/nordicsemi_ble_v2.1.1.jar"))
-//    into('build/libs')
-//    include('classes.jar')
-//    rename('classes.jar', getJarName(REPO_VERSION))
-//}
-task makeJar(type: Jar) {
-    delete('build/libs/' + getJarName(REPO_VERSION))
-    archiveName = getJarName(REPO_VERSION)
-    from(project.zipTree('build/intermediates/packaged-classes/release/classes.jar'))
-    from(project.zipTree("libs/nordicsemi_ble_v2.1.1.jar"))
-    destinationDir = file('build/libs')
-}
-makeJar.dependsOn(build)
 // 控制台运行gradlew makeJar
