@@ -41,7 +41,7 @@ class ULockTestActivity : BaseActivity() {
     override fun initListener() {
         session = ULockSession.Builder()
 //            .address("D8:6E:46:79:B8:37")
-            .address("DB:A6:92:66:65:75")
+            .address("F3:FF:9E:7B:24:7D")
             .deviceKey("yOTmK50z")
             .deviceType("D1")
             .updateKey("Vgz7")
@@ -53,19 +53,19 @@ class ULockTestActivity : BaseActivity() {
             }
 
             override fun onConnecting() {
-                Toast.makeText(this@ULockTestActivity, "正在连接...", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@ULockTestActivity, "onConnecting...", Toast.LENGTH_SHORT).show()
             }
 
             override fun onConnected() {
-                Toast.makeText(this@ULockTestActivity, "连接成功", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@ULockTestActivity, "onConnected", Toast.LENGTH_SHORT).show()
             }
 
             override fun onDisconnected() {
-                Toast.makeText(this@ULockTestActivity, "断开连接", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@ULockTestActivity, "onDisconnected", Toast.LENGTH_SHORT).show()
             }
 
             override fun onDeviceNoSupport() {
-                Toast.makeText(this@ULockTestActivity, "设备不支持", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@ULockTestActivity, "onDeviceNoSupport", Toast.LENGTH_SHORT).show()
             }
 
             override fun onReady() {
